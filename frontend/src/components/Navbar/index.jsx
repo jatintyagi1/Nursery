@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import {  useRef, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -13,8 +13,6 @@ export default function Navbar() {
 
     const toggleNavBarRef = useRef(null);
     const dropdownNavBarRef = useRef(null);
-
-    const logoImg = 'https://res.cloudinary.com/dcd6y2awx/image/upload/f_auto,q_auto/v1/PlantSeller/UI%20Images/plant_seller_bg_none';
 
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top w-100">
