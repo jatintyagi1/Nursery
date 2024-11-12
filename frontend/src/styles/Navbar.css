@@ -1,0 +1,87 @@
+/* Navbar.css */
+
+/* Common Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Desktop Styles */
+.navbar-desktop ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-desktop ul li {
+    cursor: pointer;
+}
+
+
+/* Link Styles */
+.nav-link {
+    color: #fff;
+    /* Default link color */
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: #ff9800;
+    /* Color on hover */
+    transition: color 0.3s ease;
+}
+
+.nav-link:active {
+    color: #f44336;
+    /* Color when the link is active (clicked) */
+}
+
+/* Mobile Styles */
+.navbar-mobile .menu-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    z-index: 10;
+}
+
+/* Slide-in Menu */
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 20px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Initially hidden off-screen */
+    height: 100vh;
+    width: 250px;
+    transition: right 0.3s ease;
+    z-index: 9;
+}
+
+/* When menu is open */
+.mobile-menu.open {
+    right: 0;
+    /* Slide in from the right */
+}
