@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import './Slider.css';
+import '../../styles/Home/Slider.css';
 
 export default function Slider() {
 
     const images = [
         'https://media.istockphoto.com/id/1125436449/photo/flower-garden-greenhouse.jpg?s=2048x2048&w=is&k=20&c=vPF1SU7dBupQHWvQUth9Gpdh4R7E_nPLA6d08ui34ic=',
         'https://www.heartyculturenursery.com/cdn/shop/files/2_59458964-93df-41da-8a89-515add00e716_1899x625_crop_center.jpg?v=1691581755',
-        'https://source.unsplash.com/1600x900/?garden'
+        'https://www.heartyculturenursery.com/cdn/shop/files/217_1500x500_crop_center.jpg?v=1691582998&quot'
     ];
     const [currentImage, setCurrentImage] = useState(0);
 
@@ -34,3 +34,6 @@ export default function Slider() {
         </section>
     );
 }
+
+
+
