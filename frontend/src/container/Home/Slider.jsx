@@ -4,9 +4,11 @@ import '../../styles/Home/Slider.css';
 export default function Slider() {
 
     const images = [
-        'https://media.istockphoto.com/id/1125436449/photo/flower-garden-greenhouse.jpg?s=2048x2048&w=is&k=20&c=vPF1SU7dBupQHWvQUth9Gpdh4R7E_nPLA6d08ui34ic=',
-        'https://www.heartyculturenursery.com/cdn/shop/files/2_59458964-93df-41da-8a89-515add00e716_1899x625_crop_center.jpg?v=1691581755',
-        'https://www.heartyculturenursery.com/cdn/shop/files/217_1500x500_crop_center.jpg?v=1691582998&quot'
+        'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/67015119de9a9f002b73c9bc/6-2000x600.png',
+        'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/6701514484061f0024d4b4c6/7-2000x600.png',
+        'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/670150f7e822b00032d15703/5-2000x600.png',
+        'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/6735a0b09789e20024e50d7b/banners-2000x600.png',
+        'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/6701578cabac2e00b35e07e2/festive-banners-2000x600.png'
     ];
     const [currentImage, setCurrentImage] = useState(0);
 
