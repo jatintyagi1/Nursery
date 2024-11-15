@@ -1,0 +1,108 @@
+.deals {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.deals h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.deals-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+.deals-left,
+.deals-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+    flex: 1;
+}
+
+.deals-left img,
+.deals-right img {
+    width: 100%;
+    height: auto;
+    max-width: 864px;
+}
+
+.deals-child-image {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.deals-child-image img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 1024px) {
+    .deals-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .deals-left,
+    .deals-right {
+        flex-direction: column;
+    }
+
+    .deals-left img,
+    .deals-right img {
+        max-width: 100%;
+    }
+
+    .deals-child-image {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .deals-child-image img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* For Very Small Screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+    .deals-container {
+        gap: 10px;
+    }
+
+    .deals-left,
+    .deals-right {
+        flex-direction: column;
+    }
+
+    .deals-left img,
+    .deals-right img {
+        max-width: 100%;
+    }
+
+    .deals-child-image {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .deals-child-image img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+}
