@@ -1,1 +1,6 @@
 @import './styles/Auth/SignUp.css';
+
+
+ul li {
+    content: none;
+}

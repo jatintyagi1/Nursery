@@ -28,6 +28,11 @@
     cursor: pointer;
 }
 
+.navbar-desktop ul li::before {
+    content: none;
+    cursor: pointer;
+}
+
 
 /* Link Styles */
 .nav-link {

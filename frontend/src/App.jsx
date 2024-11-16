@@ -1,10 +1,15 @@
 import './App.css'
 import { lazy } from 'react';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 const HomePage = lazy(() => import('./pages/Home'));
+const AboutUs = lazy(() => import('./pages/AboutUs/AboutUs'));
+
+
+
 const NotFound = lazy(() => import('./pages/NotFoundPage'));
+// Auth Routes
 const Register = lazy(() => import('./pages/Register'));
 const Login = lazy(() => import('./pages/Login'));
 
@@ -12,14 +17,13 @@ const Login = lazy(() => import('./pages/Login'));
 function App() {
 
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/about' element={<AboutUs />} />
+      <Route path='/register' element={<Register />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='*' element={<NotFound />} />
+    </Routes>
   )
 }
 

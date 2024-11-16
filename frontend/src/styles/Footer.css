@@ -17,7 +17,6 @@
 
 .footer-section {
     flex: 1 1 200px;
-    /* Ensures sections are flexible and responsive */
 }
 
 .footer-section h3 {
@@ -36,6 +35,10 @@
 
 .footer-section ul li {
     margin-bottom: 5px;
+}
+
+.footer-section ul li::before {
+    content: none;
 }
 
 .footer-section ul li a {

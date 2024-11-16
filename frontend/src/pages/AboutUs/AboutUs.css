@@ -1,0 +1,82 @@
+.about-us {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.aboutUs-section {
+    background: linear-gradient(90deg, #a8e063, #56ab2f);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mission-section,
+.why-choose-us,
+.team-section,
+.visit-us,
+.testimonials {
+    margin: 40px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2c7a2c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li:before {
+    content: "✔";
+    color: #2c7a2c;
+    position: absolute;
+    left: 0;
+}
+
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-left: 4px solid #2c7a2c;
+    background: #f0fff4;
+}
+
+.about-us-footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c7a2c;
+    color: white;
+    border-radius: 8px;
+}
