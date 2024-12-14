@@ -54,8 +54,8 @@ export default function AboutUs() {
                         <p>
                             Explore our nursery in person to experience the joy of plants. Our friendly team will assist you in finding the perfect plants for your space.
                         </p>
-                        <p>📍 Location: [Your Nursery Address]</p>
-                        <p>📞 Contact: [Your Contact Number]</p>
+                        <p>📍 Location: Noida</p>
+                        <p>📞 Contact: 123 456 7890</p>
                     </div>
                 </section>
 
@@ -70,10 +70,6 @@ export default function AboutUs() {
                         </blockquote>
                     </div>
                 </section>
-
-                <footer className="about-us-footer">
-                    <p>Thank you for choosing our Nursery. Let&apos;s grow together! 🌿</p>
-                </footer>
             </div>
             <Footer />
         </>

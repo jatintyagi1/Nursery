@@ -1,6 +1,7 @@
 @import './styles/Auth/SignUp.css';
 
 
-ul li {
-    content: none;
+/* styles.css */
+ul li::before {
+    content: none !important;
 }
