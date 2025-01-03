@@ -46,6 +46,11 @@
     font-size: 1.2rem;
 }
 
+.mb-nav-link {
+    text-decoration: none;
+    color: #fff;
+}
+
 .nav-link:hover {
     color: #ff9800;
     /* Color on hover */

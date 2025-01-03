@@ -32,7 +32,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; 2024 Nursery. All Rights Reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Nursery. All Rights Reserved.</p>
             </div>
         </footer>
     );

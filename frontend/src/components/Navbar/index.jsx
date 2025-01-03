@@ -37,10 +37,10 @@ function Mobile() {
                 <button className="menu-button" onClick={toggleMenu}>☰</button>
             )}
             <ul className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-                <li onClick={toggleMenu}>Home</li>
-                <li onClick={toggleMenu}>About</li>
-                <li onClick={toggleMenu}>Products</li>
-                <li onClick={toggleMenu}>Contact</li>
+                <Link to='/' className="mb-nav-link" ><li onClick={toggleMenu}>Home</li></Link>
+                <Link to='/about' className="mb-nav-link" ><li onClick={toggleMenu}>About</li></Link>
+                <Link to='/products' className="mb-nav-link" ><li onClick={toggleMenu}>Products</li></Link>
+                <Link to='/contact' className='mb-nav-link' ><li onClick={toggleMenu}>Contact</li></Link>
             </ul>
         </nav>
     );
