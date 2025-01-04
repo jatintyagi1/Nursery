@@ -8,7 +8,7 @@ export default function Slider() {
         'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/6701514484061f0024d4b4c6/7-2000x600.png',
         'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/670150f7e822b00032d15703/5-2000x600.png',
         'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/6735a0b09789e20024e50d7b/banners-2000x600.png',
-        'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/6701578cabac2e00b35e07e2/festive-banners-2000x600.png'
+        'https://www.urvann.com/s/6176774ef575bbd2b3331c8a/6701578cabac2e00b35e07e2/festive-banners-2000x600.png',
     ];
     const [currentImage, setCurrentImage] = useState(0);
 
