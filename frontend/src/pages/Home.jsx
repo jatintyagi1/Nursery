@@ -7,9 +7,10 @@ import Deals from "../container/Home/Deals";
 import PopularCategory from "../container/Home/PopularCategory";
 
 export default function Home() {
+
     return (
         <>
-            <Navbar />
+            <Navbar/>
             <div>
                 <Slider />
                 <Hero />

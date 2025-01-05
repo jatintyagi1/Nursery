@@ -7,7 +7,7 @@ const HomePage = lazy(() => import('./pages/Home'));
 const AboutUs = lazy(() => import('./pages/AboutUs/AboutUs'));
 const Contact = lazy(() => import('./pages/Contact/index'))
 
-
+// Not Found Page
 const NotFound = lazy(() => import('./pages/NotFoundPage'));
 // Auth Routes
 const Register = lazy(() => import('./pages/Register'));
