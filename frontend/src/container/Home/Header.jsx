@@ -14,7 +14,7 @@ const Headers = () => {
                     <div className="text-wrapper">
                         <p className="greeting-text"><i className='fas fa-minus'></i> Welcome back!</p>
                         <h1 className="header-text">Nursery</h1>
-                        <p className="highlight-desc">Welcome to Plant Seller: Where Green Dreams Come True!</p>
+                        <p className="highlight-desc">Welcome to Nursery: Where Green Dreams Come True!</p>
                         <p className="description">Explore our lush collection of plants to elevate your living space. From vibrant succulents to elegant ferns, find the perfect green companions to breathe life into your home.</p>
                         <p className="highlight-desc">Let&apos;s grow together!</p>
                         <Link to="/products" className="button">Go To Products <span className="arrow-icon">→</span></Link>
