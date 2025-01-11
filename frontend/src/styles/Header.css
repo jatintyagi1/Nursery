@@ -1,0 +1,151 @@
+/* Headers.css */
+
+/* Base Styles */
+.home-header {
+    padding: 2rem 4rem;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.image-container {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-wrapper {
+    max-width: 500px;
+}
+
+.greeting-text {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-text {
+    font-size: 2.5rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.highlight-desc {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.arrow-icon {
+    margin-left: 0.5rem;
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -70px;
+    }
+
+    .image-container {
+        order: -1;
+        /* Place the image on top of the text for mobile */
+        padding: 0px;
+        width: 100%;
+    }
+
+    .header-text {
+        font-size: 2rem;
+    }
+
+    .greeting-text {
+        font-size: 1rem;
+    }
+
+    .highlight-desc {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* For large screens (e.g., desktop) */
+@media (min-width: 1200px) {
+    .flex-container {
+        flex-direction: row-reverse;
+    }
+
+    .image-container {
+        padding: 2rem;
+    }
+
+    .header-text {
+        font-size: 3rem;
+    }
+
+    .greeting-text {
+        font-size: 1.5rem;
+    }
+
+    .highlight-desc {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .button {
+        font-size: 1.1rem;
+        padding: 1rem 1.8rem;
+    }
+}
