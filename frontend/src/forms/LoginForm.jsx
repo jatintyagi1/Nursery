@@ -6,8 +6,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function LoginForm() {
+import axios from 'axios';
 
+export default function LoginForm() {
     const navigate = useNavigate();
 
     const validationSchema = Yup.object().shape({
@@ -24,25 +25,27 @@ export default function LoginForm() {
     });
 
     const onSubmit = async (data) => {
+        const BACKEND_URL = import.meta.env.VITE_API_URL;
         try {
-            const response = await fetch('http://localhost:5000/api/auth/login', {
-                method: 'POST',
+            const response = await axios.post(`${BACKEND_URL}/api/auth/login`, data, {
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
             });
 
-            const result = await response.json();
-            if (response.ok) {
-                toast.success(result.message);
-                setTimeout(() => navigate('/'), 4000);
-            } else {
-                toast.error(result.error || 'Login failed');
-            }
+            const result = response.data;
+            toast.success(result.message);
+
+            setTimeout(() => navigate('/'), 4000);
+
         } catch (error) {
-            toast.error('Server error. Please try again.');
-            console.log('error', error);
+            if (error.response) {
+                toast.error(error.response.data.error || 'Login failed');
+            } else {
+                toast.error('Server error. Please try again.');
+            }
+            console.error('Error:', error);
         }
     };
+
 
     return (
         <>
@@ -62,7 +65,7 @@ export default function LoginForm() {
                             {...register('email')}
                         />
                     </div>
-                    <div className="invalid-feedback">{errors.email?.message}</div>
+                    {/* <div className="invalid-feedback">{errors.email?.message}</div> */}
                 </div>
 
                 <div className="form-group">
@@ -79,9 +82,20 @@ export default function LoginForm() {
                             {...register('password')}
                         />
                     </div>
-                    <div className="invalid-feedback">{errors.password?.message}</div>
+                    {/* <div className="invalid-feedback">{errors.password?.message}</div> */}
                 </div>
-
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'flex-end',
+                        marginBottom: '10px'
+                    }}
+                >
+                    <a href='/forgot-password' className='forgot-pass'>
+                        Forgot Password ?
+                    </a>
+                </div>
                 <button type="submit" className="btn btn-signup">Login</button>
                 <div className="login-text">
                     Don&apos;t have an account? <a href="/register">Sign Up</a>

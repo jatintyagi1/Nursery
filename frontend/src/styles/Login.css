@@ -30,10 +30,11 @@
 }
 
 .form-control {
-    border-radius: 6px;
+    border-radius: 0px 6px 6px 0px;
     padding: 12px 16px;
     border: 1px solid #ced4da;
     font-size: 16px;
+    width: 90%;
 }
 
 .form-control:focus {
@@ -41,7 +42,26 @@
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
 }
 
+/* Maintain red border and apply a subtle shadow on focus */
+.form-control.is-invalid:focus {
+    border-color: red;
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+    /* Red shadow effect */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
 /* Icon Styles */
+.input-group-prepend {
+    width: 12%;
+}
+
 .input-group-text {
     background-color: #1ae95f;
     border: none;
@@ -64,6 +84,8 @@
     text-decoration: none;
 }
 
+
+
 /* Button styles */
 .btn-signup {
     background-color: rgb(82, 239, 82);
@@ -75,6 +97,7 @@
     font-weight: 600;
     border: none;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-signup:hover {
@@ -91,6 +114,17 @@
     text-decoration: none;
     font-weight: 600;
 }
+
+.forgot-pass {
+    color: #37b0df;
+    transition: color 0.3s ease;
+}
+
+.forgot-pass:hover {
+    text-decoration: underline;
+    color: #0000ff;
+}
+
 
 .signup-wrapper .login-text a:hover {
     text-decoration: underline;
