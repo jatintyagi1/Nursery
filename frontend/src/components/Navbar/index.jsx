@@ -19,18 +19,6 @@ function Desktop() {
                 <Link to='/products' className="nav-link"><li>Products</li></Link>
                 <Link to='/contact' className="nav-link"><li>Contact</li></Link>
             </ul>
-            <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between'
-            }}>
-                <div>
-                    <button>Cart</button>
-                </div>
-                <div>
-                    <button>Login</button>
-                </div>
-            </div>
         </nav>
     );
 }
