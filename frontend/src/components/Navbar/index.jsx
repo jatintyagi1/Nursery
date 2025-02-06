@@ -3,45 +3,84 @@ import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import '../../styles/Navbar.css';
 
+//import './Navbar.css'
+
 export default function Navbar() {
     const isDesktop = useMediaQuery({ minWidth: 768 });
 
     return isDesktop ? <Desktop /> : <Mobile />
 }
 
-function Desktop() {
+
+const Desktop = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
     return (
-        <nav className="navbar navbar-desktop">
-            <h1 className="navbar-logo">Nursery</h1>
-            <ul className='desktop-ul'>
-                <Link to='/' className="nav-link" ><li>Home</li></Link>
-                <Link to='/about' className="nav-link"><li>About</li></Link>
-                <Link to='/products' className="nav-link"><li>Products</li></Link>
-                <Link to='/contact' className="nav-link"><li>Contact</li></Link>
+        <nav className="desktop-navbar">
+            <div className="nursery-name">Nursery</div>
+            <ul className="nav-links">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/shop">Shop</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
+
+            <div className="nav-buttons">
+                {isLoggedIn ? (
+                    <>
+                        <Link to="/profile" className="btn">Profile</Link>
+                        <Link to="/cart" className="btn">🛒</Link>
+                    </>
+                ) : (
+                    <>
+                        <Link to="/register" className="btn">Register</Link>
+                        <Link to="/cart" className="btn">🛒</Link>
+                    </>
+                )}
+            </div>
         </nav>
     );
-}
+};
 
-function Mobile() {
+
+
+const Mobile = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
     return (
-        <nav className="navbar navbar-mobile">
-            <h1 className="navbar-logo">Nursery</h1>
-            {!menuOpen && (
-                <button className="menu-button" onClick={toggleMenu}>☰</button>
-            )}
-            <ul className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-                <Link to='/' className="mb-nav-link" ><li onClick={toggleMenu}>Home</li></Link>
-                <Link to='/about' className="mb-nav-link" ><li onClick={toggleMenu}>About</li></Link>
-                <Link to='/products' className="mb-nav-link" ><li onClick={toggleMenu}>Products</li></Link>
-                <Link to='/contact' className='mb-nav-link' ><li onClick={toggleMenu}>Contact</li></Link>
+        <nav className="mobile-navbar">
+            <div className="nursery-name">🌱 My Nursery</div>
+
+            <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+                ☰
+            </div>
+            <ul className={`mobile-nav-links ${menuOpen ? "open" : ""}`}>
+                <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+                <li><Link to="/shop" onClick={() => setMenuOpen(false)}>Shop</Link></li>
+                <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+                <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+
+                <div className="mobile-nav-buttons">
+                    {isLoggedIn ? (
+                        <>
+                            <Link to="/profile" className="btn" onClick={() => setMenuOpen(false)}>Profile</Link>
+                            <Link to="/cart" className="btn" onClick={() => setMenuOpen(false)}>🛒</Link>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/register" className="btn" onClick={() => setMenuOpen(false)}>Register</Link>
+                            <Link to="/cart" className="btn" onClick={() => setMenuOpen(false)}>🛒</Link>
+                        </>
+                    )}
+                </div>
             </ul>
         </nav>
     );
-}
+};
+
+
+
+
+
+

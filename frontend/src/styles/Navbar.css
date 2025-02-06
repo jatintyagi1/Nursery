@@ -1,137 +1,131 @@
-/* Common Styles */
-.navbar {
+/* 🌿 General Navbar Styles */
+.navbar,
+.desktop-navbar,
+.mobile-navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    height: 60px;
+    justify-content: space-between;
+    background: #4CAF50;
+    padding: 15px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar-logo {
-    font-size: 1.5rem;
+/* Nursery Name */
+.nursery-name {
+    font-size: 22px;
     font-weight: bold;
 }
 
-/* Desktop Styles */
-.navbar-desktop ul {
+/* Desktop Navbar */
+.desktop-navbar .nav-links {
     display: flex;
+    list-style: none;
     gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.navbar-desktop ul li {
-    cursor: pointer;
-}
-
-.navbar-desktop ul li::before {
-    content: none;
-    cursor: pointer;
-}
-
-/* Link Styles */
-.nav-link {
-    color: #fff;
+.desktop-navbar .nav-links li a {
     text-decoration: none;
-    padding: 5px 10px;
-    font-size: 1.2rem;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-.mb-nav-link {
-    text-decoration: none;
-    color: #fff;
+.desktop-navbar .nav-links li a:hover {
+    color: #ffeb3b;
 }
 
-.nav-link:hover {
-    color: #ff9800;
-    transition: color 0.3s ease;
-}
-
-.nav-link:active {
-    color: #f44336;
-}
-
-/* Mobile Styles */
-.navbar-mobile .menu-button {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    z-index: 10;
-}
-
-/* Slide-in Menu */
-.mobile-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style: none;
-    padding: 20px;
-    background-color: #4CAF50;
+/* Desktop Buttons */
+.nav-buttons .btn {
+    background: white;
+    color: #4CAF50;
+    padding: 8px 15px;
     border-radius: 5px;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 250px;
-    transition: right 0.3s ease;
-    z-index: 9;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.3s;
 }
 
-.mobile-menu.open {
-    right: 0;
+.nav-buttons .btn:hover {
+    background: #ffeb3b;
+    color: black;
 }
 
-/* Cart Icon */
-.cart-link {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.cart-icon {
-    font-size: 1.5rem;
-    color: white;
-    position: relative;
-}
-
-.cart-item-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: red;
-    color: white;
-    font-size: 0.8rem;
-    padding: 2px 5px;
-    border-radius: 50%;
-}
-
-/* User Authentication */
-button.nav-link {
-    background: none;
-    border: none;
-    color: white;
+/* Mobile Navbar */
+.menu-icon {
+    display: block;
+    font-size: 24px;
     cursor: pointer;
-    font-size: 1rem;
 }
 
-button.nav-link:hover {
-    background-color: #45a049;
+.mobile-nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #4CAF50;
+    text-align: center;
+    padding: 10px 0;
 }
 
-/* Mobile Menu Item Styles */
-.mb-nav-link {
-    padding: 10px;
+.mobile-nav-links.open {
+    display: flex;
 }
 
-@media (max-width: 768px) {
-    .navbar-desktop {
+.mobile-nav-links li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.mobile-nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.mobile-nav-links li a:hover {
+    color: #ffeb3b;
+}
+
+/* Mobile Buttons */
+.mobile-nav-buttons {
+    margin-top: 10px;
+}
+
+.mobile-nav-buttons .btn {
+    background: white;
+    color: #4CAF50;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin: 5px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.mobile-nav-buttons .btn:hover {
+    background: #ffeb3b;
+    color: black;
+}
+
+/* Hide Desktop Navbar on Mobile */
+@media screen and (max-width: 768px) {
+    .desktop-navbar {
+        display: none;
+    }
+}
+
+/* Hide Mobile Navbar on Desktop */
+@media screen and (min-width: 768px) {
+    .mobile-navbar {
         display: none;
     }
 }
